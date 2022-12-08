@@ -1,0 +1,150 @@
+{
+  "Version": 1.0,
+  "General": {
+    "TargetCatalog": "",
+    "TargetCloudInstanceName": "",
+    "TargetCloudProjectName": "",
+    "TargetCloudProjectOwnerUserID": "",
+    "TargetSchema": "keshe",
+    "TargetServer": "腾讯云",
+    "TargetServerType": "MYSQL",
+    "EmptyTargetTables": false,
+    "IsContinueOnError": false,
+    "RunMultipleInsert": true,
+    "UseExtendedInsert": true,
+    "UseTransaction": true
+  },
+  "TablesGenerateOrder": [
+    "client"
+  ],
+  "Tables": [
+    {
+      "Name": "client",
+      "objectType": "DataGenerationTable",
+      "Selected": true,
+      "VerifyStatus": "Normal",
+      "ErrMsg": "",
+      "Rows": 10000,
+      "Fields": [
+        {
+          "Name": "id",
+          "objectType": "DataGenerationTableField",
+          "Selected": true,
+          "VerifyStatus": "Normal",
+          "ErrMsg": "",
+          "GenDefaultVal": false,
+          "DefaultVal": "",
+          "DefaultValPercentage": 5.0,
+          "GenNullVal": false,
+          "NullValPercentage": 5.0,
+          "IsUnique": false,
+          "ApplyGenCaseType": false,
+          "GenCaseType": "Capitalization",
+          "IsGenerateIndependently": false,
+          "Generator": {
+            "objectType": "DataGenerationPropertyClassSequence",
+            "IsUnsigned": false,
+            "StartVal": 1,
+            "CustomMinVal": 1,
+            "CustomMaxVal": 2147483647,
+            "Increment": 1,
+            "UseCustomMinVal": false,
+            "UseCustomMaxVal": false,
+            "Cycle": false
+          }
+        },
+        {
+          "Name": "name",
+          "objectType": "DataGenerationTableField",
+          "Selected": true,
+          "VerifyStatus": "Normal",
+          "ErrMsg": "",
+          "GenDefaultVal": false,
+          "DefaultVal": "",
+          "DefaultValPercentage": 5.0,
+          "GenNullVal": false,
+          "NullValPercentage": 5.0,
+          "IsUnique": false,
+          "ApplyGenCaseType": false,
+          "GenCaseType": "Capitalization",
+          "IsGenerateIndependently": false,
+          "Generator": {
+            "objectType": "DataGenerationPropertyClassStringName",
+            "FormatType": "Fullname",
+            "LanguageTypes": [
+              "ChineseSimplified",
+              "English",
+              "ChineseTraditional"
+            ]
+          }
+        },
+        {
+          "Name": "sex",
+          "objectType": "DataGenerationTableField",
+          "Selected": true,
+          "VerifyStatus": "Normal",
+          "ErrMsg": "",
+          "GenDefaultVal": false,
+          "DefaultVal": "",
+          "DefaultValPercentage": 5.0,
+          "GenNullVal": true,
+          "NullValPercentage": 5.0,
+          "IsUnique": false,
+          "ApplyGenCaseType": false,
+          "GenCaseType": "Capitalization",
+          "IsGenerateIndependently": false,
+          "Generator": {
+            "objectType": "DataGenerationPropertyClassGender",
+            "LanguageTypes": [
+              "ChineseSimplified"
+            ]
+          }
+        },
+        {
+          "Name": "tel",
+          "objectType": "DataGenerationTableField",
+          "Selected": true,
+          "VerifyStatus": "Normal",
+          "ErrMsg": "",
+          "GenDefaultVal": false,
+          "DefaultVal": "",
+          "DefaultValPercentage": 5.0,
+          "GenNullVal": false,
+          "NullValPercentage": 5.0,
+          "IsUnique": false,
+          "ApplyGenCaseType": false,
+          "GenCaseType": "Capitalization",
+          "IsGenerateIndependently": false,
+          "Generator": {
+            "objectType": "DataGenerationPropertyClassRegex",
+            "RegexString": "1[345789]\\d{9}",
+            "RawMode": false
+          }
+        },
+        {
+          "Name": "balabce",
+          "objectType": "DataGenerationTableField",
+          "Selected": true,
+          "VerifyStatus": "Normal",
+          "ErrMsg": "",
+          "GenDefaultVal": false,
+          "DefaultVal": "",
+          "DefaultValPercentage": 5.0,
+          "GenNullVal": false,
+          "NullValPercentage": 5.0,
+          "IsUnique": false,
+          "ApplyGenCaseType": false,
+          "GenCaseType": "Capitalization",
+          "IsGenerateIndependently": false,
+          "Generator": {
+            "objectType": "DataGenerationPropertyClassNumber",
+            "NumStart": 0.0,
+            "NumEnd": 11111.0,
+            "NumType": "Integer",
+            "NumDecimalPlace": 2
+          }
+        }
+      ]
+    }
+  ]
+}
